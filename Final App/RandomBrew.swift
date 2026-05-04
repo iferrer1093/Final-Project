@@ -7,9 +7,10 @@
 
 import Foundation
 
-struct personModel: Decodable {
-    let gender: String
-    let name: String
-    let location: String
-    let email: String
+struct brewModel: Decodable {
+    let category: String
+    let type: String
+    let joke: String
+    let safe: Bool
+
 }

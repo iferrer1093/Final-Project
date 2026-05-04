@@ -5,24 +5,27 @@
 //  Created by FERRER, ISAAC on 5/4/26.
 //
 
-//let gender: String
-//let name: String
-//let location: String
-//let email: String
+//let category: String
+//let type: String
+//let joke: String
+//
+//let flags: Bool
+//
+//let safe: Bool
 
 import SwiftUI
 import Combine
 
-class UserViewModel: ObservableObject {
-    @Published var gender: String = ""
-    @Published var name: String = ""
-    @Published var location: String = ""
-    @Published var email: String = ""
+class BrewViewModel: ObservableObject {
+    @Published var category: String = ""
+    @Published var type: String = ""
+    @Published var joke: String = ""
+//    @Published var flags: Dictionary = ["awesome": "Blah"]
+    @Published var safe: Bool = false
     
-    
-    func fetchUserInfo(){
+    func fetchBrewInfo(){
         guard let url = URL(
-            string: "https://randomuser.me/api/")
+            string: "https://v2.jokeapi.dev/joke/Any?type=single")
         else {
             print("Invalid URL")
             return
@@ -37,12 +40,15 @@ class UserViewModel: ObservableObject {
                 return
             }
             do {
-                let userInfo = try JSONDecoder().decode(personModel.self, from: data)
+                let brewInfo = try JSONDecoder().decode(brewModel.self, from: data)
                 DispatchQueue.main.async{
-                    self.gender = userInfo.gender
-                    self.name = userInfo.name
-                    self.location = userInfo.location
-                    self.email = userInfo.email
+                    self.category = brewInfo.category
+                    self.type = brewInfo.type
+                    self.joke = brewInfo.joke
+//                    self.flags = brewInfo.flags
+                    self.safe = brewInfo.safe
+
+
                 }
             } catch {
                 print ("Decoding failed: \(error)")

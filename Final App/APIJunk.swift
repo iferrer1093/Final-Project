@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct API_Info: View {
+struct APIJunk: View {
     var body: some View {
         Text("JokeAPI")
         Text("https://v2.jokeapi.dev/")
@@ -17,5 +17,5 @@ struct API_Info: View {
 }
 
 #Preview {
-    API_Info()
+    APIJunk()
 }
