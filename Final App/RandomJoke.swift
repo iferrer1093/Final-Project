@@ -11,5 +11,7 @@ struct brewModel: Decodable {
     let category: String
     let type: String
     let joke: String
+//    let flags: Dict
     let safe: Bool
+    
 }

@@ -30,10 +30,10 @@ struct ContentView: View {
                     Text("category: \(viewModel.category)")
                     Text("type: \(viewModel.type)")
                     Text("joke: \(viewModel.joke)")
-                    //            Text("flags: \(viewModel.flags)")
+//                    Text("flags: \(viewModel.flags)")
                     Text("safe: \(viewModel.safe)")
 //                        NavigationLink("View the flags for this joke"){
-//                            
+//                            Flags()
 //                        }
                     
                     

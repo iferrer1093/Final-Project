@@ -21,6 +21,7 @@ class BrewViewModel: ObservableObject {
     @Published var type: String = ""
     @Published var joke: String = ""
 //    @Published var flags: Dictionary = ["awesome": "Blah"]
+    @Published var flags: String = ""
     @Published var safe: Bool = false
     
     func fetchBrewInfo(){

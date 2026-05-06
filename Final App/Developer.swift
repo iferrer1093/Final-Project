@@ -8,7 +8,7 @@
 import Foundation
 
 enum Developer: String, CaseIterable, Identifiable {
-    case name, age, degree, image
+    case name, age, degree
     
     var id: String {self.rawValue}
     
@@ -19,7 +19,6 @@ enum Developer: String, CaseIterable, Identifiable {
         case .name: return "Isaac Ferrer"
         case .age: return "18"
         case .degree: return "Pursuing CIS Degree"
-        case .image: return ("Picture")
         }
     }
     
