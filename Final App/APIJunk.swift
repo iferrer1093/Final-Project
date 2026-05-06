@@ -9,11 +9,17 @@ import SwiftUI
 
 struct APIJunk: View {
     var body: some View {
-        Text("JokeAPI")
-        Text("https://v2.jokeapi.dev/")
-        Text("Isaac Ferrer")
-        
+        ScrollView {
+            VStack(){
+                Text("JokeAPI")
+                Text("https://v2.jokeapi.dev/")
+                Text("Isaac Ferrer")
+            }
+            
+        }
+        .navigationTitle("About")
     }
+        
 }
 
 #Preview {

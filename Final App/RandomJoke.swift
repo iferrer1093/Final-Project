@@ -12,5 +12,4 @@ struct brewModel: Decodable {
     let type: String
     let joke: String
     let safe: Bool
-
 }
